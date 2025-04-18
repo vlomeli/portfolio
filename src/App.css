@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #333;
+  }
+  
+  /* Styling for the sections */
+  section {
+    margin-bottom: 50px; /* Consistent space between sections */
+    padding: 40px 20px;  /* Padding inside the sections */
+  }
+  
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px; /* Space between title and content */
+    color: #333;
+  }
+
+  .title {
+    display: flex;
+    justify-content: center;
+  } 
+  
+  /* Optional: Section-specific styling */
+  #about {
+    background-color: #f9f9f9;
+  }
+  
+  #projects {
+    background-color:  #f9f9f9;
+  }
+
+  /* #intro {
+
+  } */
+
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+  }
