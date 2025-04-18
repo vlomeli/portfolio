@@ -1,0 +1,20 @@
+.profile-bubble {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.2s ease-out;
+    will-change: transform;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .profile-bubble img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 65%;
+    display: block;
+  }
+  

@@ -1,10 +1,11 @@
 import "./intro.css";
+import ProfileBubble from "../profile-bubble/profile-bubble";
 
 function Intro() {
   return (
     <div className="intro">
-        
-      <h2 className="name"> Victor Lomeli Ponce </h2>
+        <ProfileBubble />
+      <h1 className="name"> Victor Lomeli Ponce </h1>
       <h3> Full-Stack Web Developer</h3>
       <p className="text">
         {" "}
