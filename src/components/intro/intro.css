@@ -1,12 +1,15 @@
 .name {
     color: white;
     font-size: 3rem;
-    /* width: 400px; */
 }
 
 .text {
     width: 600px;
     text-align: center;
+}
+
+.intro h2 {
+    color: white;
 }
 
 .intro {
@@ -15,3 +18,27 @@
     flex-direction: column;
     align-items: center;
 }
+
+/* Tech Stack */
+.techstack {
+    margin-top: 30px;
+    cursor: pointer;
+  }
+  
+  .tech-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .tech-icons img {
+    max-height: 40px;
+  }
+  
+  .tech-icon {
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .tech-icon:hover {
+    transform: translateY(-30px);
+  }

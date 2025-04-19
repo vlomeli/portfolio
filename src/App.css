@@ -2,15 +2,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Sour Gummy', sans-serif;
   }
   
   body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #333;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(
+      135deg,
+      #0a0a0a,      /* Near black gray */
+      #141414 40%,   /* Slightly lighter gray to keep depth */
+      #1e1e1e 60%,   /* Very subtle light gray for gloss */
+      #0a0a0a
+    );
+    min-height: 100vh;
   }
   
-  /* Styling for the sections */
   section {
     margin-bottom: 50px; /* Consistent space between sections */
     padding: 40px 20px;  /* Padding inside the sections */
@@ -19,7 +26,7 @@
   section h2 {
     font-size: 2rem;
     margin-bottom: 20px; /* Space between title and content */
-    color: #333;
+    color: white;
   }
 
   .title {
@@ -29,21 +36,23 @@
   
   /* Optional: Section-specific styling */
   #about {
-    background-color: #f9f9f9;
+
   }
   
   #projects {
-    background-color:  #f9f9f9;
+
   }
-
-  /* #intro {
-
-  } */
-
   
   footer {
     text-align: center;
     padding: 20px;
     background-color: #333;
     color: #fff;
+  }
+
+  hr {
+    border: none;
+    height: 1px;
+    background-color: #ccc; /* light gray line */
+    margin: 2rem 0; /* spacing above and below */
   }
