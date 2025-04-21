@@ -11,15 +11,15 @@ function App() {
     <>
       <Navbar />
       <main>
-        <section id="intro">
+        <section id="Intro">
           <Intro />
         </section>
         <hr />
-        <section id="about">
+        <section id="About">
           <About />
         </section>
         <hr />
-        <section id="projects">
+        <section id="Projects">
           <Projects />
         </section>
         <hr />
