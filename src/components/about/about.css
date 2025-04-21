@@ -122,3 +122,30 @@
     }
   }
   
+  .timeline-item {
+    opacity: 0;
+    transition: all 0.6s ease-out;
+  }
+  
+  .timeline-item .timeline-content {
+    transition: all 0.6s ease-out;
+  }
+  
+  /* Animate from left */
+  .timeline-content.from-left {
+    transform: translateX(-60px);
+    opacity: 0;
+  }
+  
+  /* Animate from right */
+  .timeline-content.from-right {
+    transform: translateX(60px);
+    opacity: 0;
+  }
+  
+  /* When in view */
+  .timeline-item.show .from-left,
+  .timeline-item.show .from-right {
+    transform: translateX(0);
+    opacity: 1;
+  }

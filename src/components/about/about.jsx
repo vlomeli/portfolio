@@ -5,9 +5,9 @@ function About (){
   const [activeSkillCategory, setActiveSkillCategory] = useState("frontend");
 
   const skills = {
-    frontend: ["React", "HTML", "CSS", "JavaScript", "Vite"],
-    backend: ["Node.js", "Express", "SQL", "Firebase"],
-    tools: ["Git", "VSCode", "Figma", "Postman"]
+    frontend: ["React", "HTML", "CSS", "JavaScript"],
+    backend: ["Node", "Express", "SQL", "Firebase"],
+    tools: ["Git", "Github", "Figma", "Postman"]
   };
 
   // Scroll reveal logic
@@ -17,18 +17,21 @@ function About (){
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
+          const classList = entry.target.classList;
           if (entry.isIntersecting) {
-            entry.target.classList.add("show");
+            classList.add("show");
+          } else {
+            classList.remove("show");
           }
         });
       },
       { threshold: 0.2 }
     );
-
+  
     sectionRefs.current.forEach(ref => {
       if (ref) observer.observe(ref);
     });
-
+  
     return () => {
       sectionRefs.current.forEach(ref => {
         if (ref) observer.unobserve(ref);
@@ -100,15 +103,19 @@ function About (){
       <div className="timeline">
         {sections.map((section, index) => (
           <div
-            key={index}
-            ref={el => (sectionRefs.current[index] = el)}
-            className={`timeline-item ${index % 2 === 0 ? "left" : "right"}`}
+          key={index}
+          ref={el => (sectionRefs.current[index] = el)}
+          className={`timeline-item ${index % 2 === 0 ? "left" : "right"}`}
+        >
+          <div
+            className={`about-section timeline-content ${
+              index % 2 === 0 ? "from-left" : "from-right"
+            }`}
           >
-            <div className="about-section timeline-content">
-              <h3>{section.title}</h3>
-              {section.content}
-            </div>
+            <h3>{section.title}</h3>
+            {section.content}
           </div>
+        </div>
         ))}
       </div>
     </div>
