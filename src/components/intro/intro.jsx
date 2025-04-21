@@ -6,39 +6,75 @@ import js from "../../assets/js.png";
 import react from "../../assets/react.png";
 import sql from "../../assets/sql.png";
 import mongodb from "../../assets/mongodb.png";
+import { motion } from "framer-motion";
+
+const textVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.2, duration: 0.6 },
+  }),
+};
 
 function Intro() {
   return (
-    <div className="intro">
-      <ProfileBubble />
-      <h1 className="name"> Victor Lomeli Ponce </h1>
-      <h2> Full-Stack Web Developer</h2>
-      <p className="text">
-        {" "}
-        I love to create things. I love to problem solve—which is why I love
-        what I do. This website is a place where you can check out some of my
-        projects, learn a bit about who I am, and find my contact info if you
-        ever want to connect.{" "}
-      </p>
-
-      <div className="techstack">
-        <h2>
-          <span className="tech-icons">
-            <img src={html} alt="html logo" className="tech-icon"></img>
-            <img src={css} alt="css logo" className="tech-icon"></img>
-            <img src={js} alt="js logo" className="tech-icon"></img>
-            {/* <img src={python} alt="linkedin logo" className="tech-icon"></img> */}
-            <img
-                  src={react}
-                  alt="react logo"
-                  className="tech-icon"
-                ></img>
-            <img src={sql} alt="sql logo" className="tech-icon"></img>
-            <img src={mongodb} alt="mongodb logo" className="tech-icon"></img>
-          </span>
-        </h2>
+    <section id="intro" className="intro-section">
+      <div className="intro-left">
+        <ProfileBubble />
+        <div className="techstack">
+          <div className="tech-icons">
+            {[html, css, js, react, sql, mongodb].map((icon, i) => (
+              <motion.img
+                key={i}
+                src={icon}
+                alt="tech"
+                className="tech-icon"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.4 }}
+              />
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
+
+      <div className="intro-right">
+        <motion.h1
+          className="name"
+          custom={0}
+          initial="hidden"
+          whileInView="visible"
+          variants={textVariants}
+          viewport={{ once: true }}
+        >
+          Victor Lomeli Ponce
+        </motion.h1>
+        <motion.h2
+          initial="hidden"
+          whileInView="visible"
+          custom={1}
+          variants={textVariants}
+          viewport={{ once: true }}
+        >
+          Full-Stack Web Developer
+        </motion.h2>
+        <motion.p
+          className="text"
+          initial="hidden"
+          whileInView="visible"
+          custom={2}
+          variants={textVariants}
+          viewport={{ once: true }}
+        >
+          I love to create things. I love to problem solve—which is why I love
+          what I do. This website is a place where you can check out some of my
+          projects, learn a bit about who I am, and find my contact info if you
+          ever want to connect.
+        </motion.p>
+      </div>
+    </section>
   );
 }
 

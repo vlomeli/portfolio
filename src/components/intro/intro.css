@@ -1,44 +1,65 @@
-.name {
-    color: white;
-    font-size: 3rem;
+.intro-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  color: white;
+  padding: 2rem 1rem;
+  scroll-margin-top: 100px; /* helps with anchor nav if needed */
 }
 
-.text {
-    width: 600px;
-    text-align: center;
+.intro-left,
+.intro-right {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+  }
+}
+
+.name {
+  font-size: 2.8rem; /* Slightly reduced for balance */
+  margin-bottom: 0.5rem;
 }
 
 .intro h2 {
-    color: white;
+  color: white;
+  margin-bottom: 1rem;
 }
 
-.intro {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.text {
+  max-width: 600px;
+  text-align: center;
 }
 
 /* Tech Stack */
 .techstack {
-    margin-top: 30px;
-    cursor: pointer;
-  }
-  
-  .tech-icons {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .tech-icons img {
-    max-height: 40px;
-  }
-  
-  .tech-icon {
-    transition: transform 0.4s ease-in-out;
-  }
-  
-  .tech-icon:hover {
-    transform: translateY(-30px);
-  }
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.tech-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tech-icon {
+  max-height: 50px;
+  transition: transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.tech-icon:hover {
+  transform: translateY(-20px) scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+}
