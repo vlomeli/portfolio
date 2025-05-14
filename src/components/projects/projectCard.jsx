@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
-import "./ProjectCard.css";
+import "./projectCard.css";
 
 const cardVariants = {
     hidden: { opacity: 0, y: 50 },
