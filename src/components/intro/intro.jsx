@@ -68,10 +68,11 @@ function Intro() {
           variants={textVariants}
           viewport={{ once: true }}
         >
-          I love creating things and solving problems, which is why I'm so
-          passionate about what I do. This website is a space where you can
-          explore some of my projects, learn more about me, and find my contact
-          information if you'd like to connect.
+          I like making things, breaking things (sometimes), and figuring out
+          how they work. I’m always trying to learn something new or build
+          something better. This site’s where I keep my projects, share a bit
+          about myself, and make it easy to reach out if you ever want to
+          connect.
         </motion.p>
       </div>
     </section>

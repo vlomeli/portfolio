@@ -1,9 +1,7 @@
 import journal from "../../assets/fs-journal.png";
-// import emailtemp from "../../assets/emailtemp.png";
 import detailing from "../../assets/detailing.png";
 import testingtool from "../../assets/testingtool.png";
 import socialmedia from "../../assets/socialmedia.png";
-// import bitratecalculator from "../../assets/bitratecalculator.png";
 import nestwork from "../../assets/nestwork.png";
 import careerharvest from "../../assets/careerharvest.png";
 import rotorheads from "../../assets/rotorheads.png";
@@ -28,8 +26,7 @@ export const TopProjectsData = [
     title: "Full-stack Social Media",
     description:
       "During my time at BVT, my team and I developed a full-stack social media application using React, Bulma, MongoDB, and Express.js. This platform enables users to share text-based posts and express themselves, fostering engagement and interaction among the community.",
-    githubURL: "https://github.com/vlomeli/ddsm-front-end", 
-    // "https://github.com/vlomeli/ddsm-back-end"
+    githubURL: "https://github.com/vlomeli/ddsm-front-end",
   },
   {
     img: nestwork,
@@ -62,20 +59,4 @@ export const CardData = [
       "Crafted my inaugural full-stack endeavor: a journal equipped with mood tracking and an interactive calendar. Leveraging React, CSS, Express.js, and SQL, the goal was to put into practice all the skills I have acquired.",
     githubURL: "https://github.com/vlomeli/journal-frontend",
   },
-//   {
-//     img: bitratecalculator,
-//     title: "Stream Bitrate Calculator",
-//     description:
-//       "I developed a calculator designed to help streamers determine the ideal bitrate based on their internet speed, resolution, frame rate, and encoding technology. This tool aims to optimize both the quality and interactivity of their streams.",
-//     githubURL: "https://github.com/vlomeli/stream-bitrate-calculator",
-//   },
-//   {
-//     img: emailtemp,
-//     title: "Email Template",
-//     description:
-//       "One of my first projects at Bay Valley Tech was to get comfortable with a CSS framework. I used Bootstrap to create and refine a responsive grid layout, replicating an email template.",
-//     githubURL: "https://github.com/vlomeli/Bootstrap-Email-vlomeli",
-//   },
 ];
-
-
