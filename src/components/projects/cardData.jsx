@@ -6,14 +6,22 @@ import socialmedia from "../../assets/socialmedia.png";
 // import bitratecalculator from "../../assets/bitratecalculator.png";
 import nestwork from "../../assets/nestwork.png";
 import careerharvest from "../../assets/careerharvest.png";
+import rotorheads from "../../assets/rotorheads.png";
 
 export const TopProjectsData = [
+  {
+    img: rotorheads,
+    title: "Rotorhead Partners",
+    description:
+      "Collaborated with Jeremy Neuner, Program Partnerships Lead at Google and partner of Digital Nest, to bring his website to life. Worked closely with the design team and developed the site from scratch using WordPress with custom CSS.",
+    githubURL: "https://rotorheadpartners.us/",
+  },
   {
     img: careerharvest,
     title: "Career Harvest",
     description:
       "Contributed to an internal Digital Nest tool that web scrapes job listings based on the specific career paths interns choose to explore. Refactored the frontend for a cleaner, more user-friendly interface, and continue to maintain and enhance the platform by adding new features.",
-    githubURL: "https://github.com/vlomeli/ddsm-front-end",
+    githubURL: "https://careerharvest.org/login",
   },
   {
     img: socialmedia,
@@ -28,7 +36,7 @@ export const TopProjectsData = [
     title: "Nestwork",
     description:
       "Worked on an internal Digital Nest tool designed to streamline meeting scheduling with interns. As the intern pool continues to grow, this tool improves efficiency in managing organizational meetings. Contributed to implementing pairing functionality and enhancing the frontend for a smoother user experience.",
-    githubURL: "https://github.com/vlomeli/ddsm-backend-testing-tool",
+    githubURL: "https://bizznest.github.io/modesto-bizznest-scheduler/",
   },
 ];
 
@@ -38,7 +46,7 @@ export const CardData = [
     title: "Freelance Detailing Website",
     description:
       "A local detailing company needed to expand their business online, so I created a website for them. Using HTML, JavaScript, and CSS, I developed a solution featuring EmailJS for quote requests and an embedded map to display their location. The website is hosted with a custom domain.",
-    githubURL: "https://github.com/vlomeli/ddsm-front-end",
+    githubURL: "https://speedysmobiledetailing.net/",
   },
   {
     img: testingtool,

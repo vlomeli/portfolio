@@ -58,7 +58,7 @@ function Intro() {
           variants={textVariants}
           viewport={{ once: true }}
         >
-          Full-Stack Web Developer
+          Full-Stack Software Developer
         </motion.h2>
         <motion.p
           className="text"
@@ -68,10 +68,10 @@ function Intro() {
           variants={textVariants}
           viewport={{ once: true }}
         >
-          I love to create things. I love to problem solve—which is why I love
-          what I do. This website is a place where you can check out some of my
-          projects, learn a bit about who I am, and find my contact info if you
-          ever want to connect.
+          I love creating things and solving problems, which is why I'm so
+          passionate about what I do. This website is a space where you can
+          explore some of my projects, learn more about me, and find my contact
+          information if you'd like to connect.
         </motion.p>
       </div>
     </section>

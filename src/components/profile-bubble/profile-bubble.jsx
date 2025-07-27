@@ -1,7 +1,7 @@
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { useEffect, useRef} from "react";
 import "./profile-bubble.css";
-import profilePic from "../../assets/pfp.JPG";
+import profilePic from "../../assets/pfp2.JPG";
 
 
 function ProfileBlob({

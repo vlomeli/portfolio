@@ -35,7 +35,7 @@ const cardVariants = {
           <p>{description}</p>
           {githubURL && (
             <a href={githubURL} target="_blank" rel="noopener noreferrer">
-              <button className="project-btn">View Code</button>
+              <button className="project-btn">View Project</button>
             </a>
           )}
         </div>
