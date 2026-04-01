@@ -1,4 +1,4 @@
-import journal from "../../assets/fs-journal.png";
+import journal from "../../assets/meejournal.png";
 import detailing from "../../assets/detailing.png";
 import testingtool from "../../assets/testingtool.png";
 import socialmedia from "../../assets/socialmedia.png";

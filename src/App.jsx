@@ -1,4 +1,3 @@
-import { useState } from "react";
 import About from "./components/about/about";
 import Navbar from "./components/navbar/navbar";
 import Projects from "./components/projects/projects";
@@ -10,19 +9,10 @@ function App() {
   return (
     <>
       <Navbar />
-      <main>
-        <section id="Intro">
-          <Intro />
-        </section>
-        <hr />
-        <section id="About">
-          <About />
-        </section>
-        <hr />
-        <section id="Projects">
-          <Projects />
-        </section>
-        <hr />
+      <main className="page">
+        <Intro />
+        <About />
+        <Projects />
       </main>
       <Footer />
     </>

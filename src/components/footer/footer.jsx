@@ -1,9 +1,12 @@
 import "./footer.css";
 
 function Footer() {
+  const year = new Date().getFullYear();
   return (
-    <footer>
-      <p>© 2025 My Portfolio</p>
+    <footer className="footer">
+      <div className="footer-inner">
+        <p>© {year} Victor Lomeli Ponce</p>
+      </div>
     </footer>
   );
 }

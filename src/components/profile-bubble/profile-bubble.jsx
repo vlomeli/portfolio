@@ -1,4 +1,4 @@
-import { motion, useMotionValue, useSpring } from "framer-motion";
+import { motion as Motion, useMotionValue, useSpring } from "framer-motion";
 import { useEffect, useRef} from "react";
 import "./profile-bubble.css";
 import profilePic from "../../assets/pfp.JPG";
@@ -59,7 +59,7 @@ function ProfileBlob({
     }, [mouseX, mouseY]);
   
     return (
-      <motion.div
+      <Motion.div
         ref={blobRef}
         className="profile-blob"
         style={{
@@ -79,7 +79,7 @@ function ProfileBlob({
         }}
       >
         <img src={imageUrl} alt={altText} />
-      </motion.div>
+      </Motion.div>
     );
   }
   

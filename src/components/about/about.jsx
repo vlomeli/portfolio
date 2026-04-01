@@ -14,26 +14,26 @@ function About() {
   const sectionRefs = useRef([]);
 
   useEffect(() => {
+    const refs = sectionRefs.current;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           const classList = entry.target.classList;
           if (entry.isIntersecting) {
             classList.add("show");
-          } else {
-            classList.remove("show");
+            observer.unobserve(entry.target);
           }
         });
       },
       { threshold: 0.2 }
     );
 
-    sectionRefs.current.forEach((ref) => {
+    refs.forEach((ref) => {
       if (ref) observer.observe(ref);
     });
 
     return () => {
-      sectionRefs.current.forEach((ref) => {
+      refs.forEach((ref) => {
         if (ref) observer.unobserve(ref);
       });
     };
@@ -136,27 +136,29 @@ function About() {
   ];
 
   return (
-    <div className="timeline-wrapper">
-      <h2 className="timeline-title">About Me</h2>
-      <div className="timeline">
-        {sections.map((section, index) => (
-          <div
-            key={index}
-            ref={(el) => (sectionRefs.current[index] = el)}
-            className={`timeline-item ${index % 2 === 0 ? "left" : "right"}`}
-          >
+    <section id="about" className="about">
+      <div className="section-inner timeline-wrapper">
+        <h2 className="section-title">About</h2>
+        <div className="timeline">
+          {sections.map((section, index) => (
             <div
-              className={`about-section timeline-content ${
-                index % 2 === 0 ? "from-left" : "from-right"
-              }`}
+              key={section.title}
+              ref={(el) => (sectionRefs.current[index] = el)}
+              className={`timeline-item ${index % 2 === 0 ? "left" : "right"}`}
             >
-              <h3>{section.title}</h3>
-              {section.content}
+              <div
+                className={`timeline-content ${
+                  index % 2 === 0 ? "from-left" : "from-right"
+                }`}
+              >
+                <h3>{section.title}</h3>
+                {section.content}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 

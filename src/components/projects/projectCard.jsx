@@ -1,46 +1,47 @@
-import React from "react";
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import { Star } from "lucide-react";
 import "./projectCard.css";
 
 const cardVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: i => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: i * 0.3, // domino effect
-        duration: 0.3,
-        ease: "easeOut",
-      },
-    }),
-  };
+  hidden: { opacity: 0, y: 14 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.35, ease: "easeOut" },
+  },
+};
   
-  function ProjectCard ({ img, title, description, githubURL, isTopProject, index }) {
-    return (
-      <motion.div
-        className="project-card"
-        custom={index} // use index for delay
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.5 }}
-        variants={cardVariants}
-      >
-        <img src={img} alt={title} className="project-img" />
-        <div className="project-content">
-          <div className="project-header">
-            <h3>{title}</h3>
-            {isTopProject && <Star className="star-icon" fill="#facc15" />}
-          </div>
-          <p>{description}</p>
-          {githubURL && (
-            <a href={githubURL} target="_blank" rel="noopener noreferrer">
-              <button className="project-btn">View Code</button>
-            </a>
+function ProjectCard({ img, title, description, githubURL, isTopProject }) {
+  const buttonLabel =
+    githubURL?.includes("github.com") ? "View Code" : "View Project";
+
+  return (
+    <Motion.article className="project-card" variants={cardVariants}>
+      <img src={img} alt={title} className="project-img" loading="lazy" />
+      <div className="project-content">
+        <div className="project-header">
+          <h3>{title}</h3>
+          {isTopProject && (
+            <span className="top-badge" title="Top project">
+              <Star className="star-icon" aria-hidden="true" />
+              <span>Top</span>
+            </span>
           )}
         </div>
-      </motion.div>
-    );
-  };
+        <p>{description}</p>
+        {githubURL && (
+          <a
+            className="project-btn"
+            href={githubURL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {buttonLabel}
+          </a>
+        )}
+      </div>
+    </Motion.article>
+  );
+}
   
   export default ProjectCard;
