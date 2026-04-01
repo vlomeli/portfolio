@@ -1,5 +1,4 @@
 import { motion as Motion } from "framer-motion";
-import { Star } from "lucide-react";
 import "./projectCard.css";
 
 const cardVariants = {
@@ -11,7 +10,7 @@ const cardVariants = {
   },
 };
   
-function ProjectCard({ img, title, description, githubURL, isTopProject }) {
+function ProjectCard({ img, title, description, githubURL }) {
   const buttonLabel =
     githubURL?.includes("github.com") ? "View Code" : "View Project";
 
@@ -21,12 +20,6 @@ function ProjectCard({ img, title, description, githubURL, isTopProject }) {
       <div className="project-content">
         <div className="project-header">
           <h3>{title}</h3>
-          {isTopProject && (
-            <span className="top-badge" title="Top project">
-              <Star className="star-icon" aria-hidden="true" />
-              <span>Top</span>
-            </span>
-          )}
         </div>
         <p>{description}</p>
         {githubURL && (
@@ -44,4 +37,4 @@ function ProjectCard({ img, title, description, githubURL, isTopProject }) {
   );
 }
   
-  export default ProjectCard;
+export default ProjectCard;

@@ -57,27 +57,7 @@
   font-size: 14px;
 }
   
-  .star-icon {
-  width: 14px;
-  height: 14px;
-  color: #facc15;
-  fill: #facc15;
-}
-
-.top-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  background: rgba(250, 204, 21, 0.12);
-  border: 1px solid rgba(250, 204, 21, 0.22);
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 12px;
-  white-space: nowrap;
-}
-  
-  .project-btn {
+.project-btn {
   margin-top: auto;
   display: inline-flex;
   align-items: center;

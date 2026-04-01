@@ -1,15 +1,10 @@
 import { motion as Motion } from "framer-motion";
-import { CardData, TopProjectsData } from "./cardData";
+import { CardData } from "./cardData";
 import ProjectCard from "./projectCard";
 
 import "./projects.css";
 
 function Projects() {
-  const combinedProjects = [
-    ...TopProjectsData.map((p) => ({ ...p, isTopProject: true })),
-    ...CardData,
-  ];
-
   const gridVariants = {
     hidden: {},
     visible: {
@@ -31,7 +26,7 @@ function Projects() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          {combinedProjects.map((project) => (
+          {CardData.map((project) => (
             <ProjectCard key={project.title} {...project} />
           ))}
         </Motion.div>
