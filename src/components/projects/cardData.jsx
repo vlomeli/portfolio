@@ -5,6 +5,7 @@ import socialmedia from "../../assets/socialmedia.png";
 import nestwork from "../../assets/nestwork.png";
 import careerharvest from "../../assets/careerharvest.png";
 import cloneguard from "../../assets/cloneguard.png";
+import rotorheads from "../../assets/rotorheads.png";
 
 export const CardData = [
   {
@@ -27,6 +28,13 @@ export const CardData = [
     description:
       "Worked on an internal Digital Nest tool designed to streamline meeting scheduling with interns. As the intern pool continues to grow, this tool improves efficiency in managing organizational meetings. Contributed to implementing pairing functionality and enhancing the frontend for a smoother user experience.",
     githubURL: "https://bizznest.github.io/modesto-bizznest-scheduler/",
+  },
+   {
+    img: rotorheads,
+    title: "Rotorheads",
+    description:
+      "A WordPress-based website built for Rotorhead Partners, a leadership and team-building workshop company led by a Google program partnership lead, designed to showcase custom facilitation programs that help teams build trust, presence, and alignment through structured play. Working alongside a design team, I implemented all workshop pages, custom-coded the workshops dropdown navigation, corrected CSS conflicts site-wide, and assisted the team in resolving layout inconsistencies, all translated into responsive, production-ready builds using WordPress, Elementor, Spectra One, custom JavaScript, and CSS.",
+    githubURL: "https://rotorheadpartners.us/",
   },
   {
     img: detailing,
@@ -55,5 +63,5 @@ export const CardData = [
     description:
       "Contributed to an internal Digital Nest tool that web scrapes job listings based on the specific career paths interns choose to explore. Refactored the frontend for a cleaner, more user-friendly interface, and continue to maintain and enhance the platform by adding new features.",
     githubURL: "https://github.com/REPLACE_ME",
-  },
+  }
 ];
