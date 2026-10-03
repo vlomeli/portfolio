@@ -4,8 +4,12 @@
 
 .timeline-wrapper {
   padding: 0;
-  max-width: 1000px;
+  max-width: var(--content-width);
   margin: 0 auto;
+}
+
+.timeline-wrapper > .section-title {
+  margin-left: 2rem;
 }
   
   /* Timeline */
@@ -22,7 +26,7 @@
     top: 0;
     width: 2px;
     height: 100%;
-    background: rgba(255, 255, 255, 0.12);
+    background: var(--border);
     transform: translateX(-50%);
   }
   
@@ -52,13 +56,13 @@
   }
   
   .timeline-content {
-    background: rgba(18, 18, 18, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: var(--surface);
+    border: 1px solid var(--border);
     padding: 1.25rem;
     border-radius: 1rem;
     box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
     backdrop-filter: blur(10px);
-    color: rgba(255, 255, 255, 0.86);
+    color: var(--text);
   }
   
   .timeline-item h3 {
@@ -66,7 +70,7 @@
   }
 
   .timeline-content p {
-    color: rgba(255, 255, 255, 0.72);
+    color: var(--muted);
     line-height: 1.65;
   }
 
@@ -85,18 +89,18 @@
   
   .skill-tabs button {
     padding: 0.5rem 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    background: var(--surface-muted);
     border-radius: 20px;
     cursor: pointer;
     transition: background 0.2s, border-color 0.2s, transform 0.2s;
-    color: rgba(255, 255, 255, 0.82);
+    color: var(--muted);
   }
   
   .skill-tabs button.active,
   .skill-tabs button:hover {
-    background: rgba(255, 255, 255, 0.09);
-    border-color: rgba(255, 255, 255, 0.18);
+    background: var(--surface);
+    border-color: var(--border-strong);
     transform: translateY(-1px);
   }
   
@@ -110,15 +114,58 @@
   }
   
   .skill-list li {
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: var(--surface-muted);
+    border: 1px solid var(--border);
     padding: 0.5rem 0.9rem;
     border-radius: 999px;
-    color: rgba(255, 255, 255, 0.84);
+    color: var(--muted);
+  }
+
+  .experience-list,
+  .education-list {
+    display: grid;
+    gap: 14px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .experience-list li,
+  .education-list li {
+    display: grid;
+    gap: 3px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .experience-list li:last-child,
+  .education-list li:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .experience-list strong,
+  .education-list strong {
+    color: var(--text);
+    font-size: 15px;
+  }
+
+  .experience-list span,
+  .experience-list time,
+  .education-list span,
+  .education-list time {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.5;
   }
   
   /* Mobile Responsive */
   @media (max-width: 768px) {
+    .timeline-wrapper > .section-title {
+      margin-left: 0;
+      text-align: center;
+    }
+
     .timeline::before {
       left: 8px;
     }

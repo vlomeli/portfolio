@@ -10,28 +10,24 @@ const cardVariants = {
   },
 };
   
-function ProjectCard({ img, title, description, githubURL }) {
-  const buttonLabel =
-    githubURL?.includes("github.com") ? "View Code" : "View Project";
-
+function ProjectCard({ project, onOpen }) {
+  const { images = [], title, description, stack = [] } = project;
   return (
     <Motion.article className="project-card" variants={cardVariants}>
-      <img src={img} alt={title} className="project-img" loading="lazy" />
+      <div className="project-preview">
+        {images[0] ? (
+          <img src={images[0]} alt="" className="project-img" loading="lazy" />
+        ) : (
+          <span className="project-image-placeholder">Project preview coming soon</span>
+        )}
+      </div>
       <div className="project-content">
         <div className="project-header">
           <h3>{title}</h3>
         </div>
         <p>{description}</p>
-        {githubURL && (
-          <a
-            className="project-btn"
-            href={githubURL}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {buttonLabel}
-          </a>
-        )}
+        {stack.length > 0 && <p className="project-stack-preview">{stack.slice(0, 3).join(" · ")}</p>}
+        <button className="project-btn" type="button" onClick={onOpen} aria-label={`Open ${title} project details`} title="Open project details">…</button>
       </div>
     </Motion.article>
   );

@@ -50,7 +50,7 @@ function Intro() {
             variants={textVariants}
             viewport={{ once: true }}
           >
-            Victor Lomeli Ponce
+            VICTOR LOMELI PONCE
           </Motion.h1>
           <Motion.h2
             className="role"
@@ -60,7 +60,7 @@ function Intro() {
             variants={textVariants}
             viewport={{ once: true }}
           >
-            Full-Stack Software Engineer
+            Software & Solutions Engineer
           </Motion.h2>
           <Motion.p
             className="text"

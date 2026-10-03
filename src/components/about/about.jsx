@@ -5,10 +5,87 @@ function About() {
   const [activeSkillCategory, setActiveSkillCategory] = useState("frontend");
 
   const skills = {
-    frontend: ["React", "HTML", "CSS", "JavaScript"],
-    backend: ["Node", "Express", "SQL", "Firebase"],
-    tools: ["Git", "Github", "Figma", "Postman"],
+    frontend: ["React", "HTML", "CSS", "JavaScript", "WordPress"],
+    backend: [
+      "Node.js",
+      "Express",
+      "Python",
+      "SQL",
+      "MySQL",
+      "SQLite",
+      "PostgreSQL",
+      "Prisma",
+      "Firebase",
+      "REST APIs",
+    ],
+    tools: ["Git", "GitHub", "Figma", "Postman", "pytest", "Faker"],
+    itSystems: [
+      "Endpoint Provisioning",
+      "User Lifecycle Management",
+      "SaaS Administration",
+      "Identity & Access Management",
+      "Google Workspace",
+      "Asset Management",
+      "License Management",
+      "Networking",
+      "Troubleshooting",
+      "Zendesk",
+      "Documentation",
+    ],
   };
+
+  const skillLabels = {
+    frontend: "Frontend",
+    backend: "Backend",
+    tools: "Tools",
+    itSystems: "IT & Systems",
+  };
+
+  const experience = [
+    {
+      title: "Solutions Engineer",
+      organization: "DigitalNEST · Modesto, CA",
+      dates: "Aug 2025 – Sep 2026",
+    },
+    {
+      title: "Full-Stack Software Engineer Associate",
+      organization: "DigitalNEST · Modesto, CA",
+      dates: "Aug 2024 – Aug 2025",
+    },
+    {
+      title: "Full-Stack Software Engineer Intern",
+      organization: "Bay Valley Tech · Modesto, CA",
+      dates: "Mar 2024 – Aug 2024",
+    },
+    {
+      title: "IT Specialist",
+      organization: "Ceres Unified School District · Ceres, CA",
+      dates: "Aug 2023 – Mar 2024",
+    },
+    {
+      title: "IT Support Technician Intern",
+      organization: "City of Turlock · Turlock, CA",
+      dates: "Feb 2023 – Jun 2023",
+    },
+  ];
+
+  const education = [
+    {
+      credential: "Free Code Academy",
+      institution: "Bay Valley Tech · Modesto, CA",
+      dates: "2023 – 2024",
+    },
+    {
+      credential: "B.S. Computer Information Systems",
+      institution: "California State University, Stanislaus · Turlock, CA",
+      dates: "2021 – 2023",
+    },
+    {
+      credential: "A.S.-T. Business Administration",
+      institution: "Merced College · Merced, CA",
+      dates: "2019 – 2021",
+    },
+  ];
 
   // Scroll reveal logic
   const sectionRefs = useRef([]);
@@ -41,22 +118,6 @@ function About() {
 
   const sections = [
     {
-      title: "Bio",
-      content: (
-        <p>
-          I care about building things that are thoughtful, useful, and built to
-          last. Whether it's refining a small interaction or thinking through
-          how systems connect, I enjoy the process of turning ideas into
-          experiences people can actually use. I’m curious by nature and often
-          dig into how things work—not just to understand them, but to find ways
-          to make them better. Outside of code, I value collaboration, good
-          communication, and creating a space where people can do their best
-          work together. Every project teaches me something new, and that’s a
-          big part of what keeps me motivated.
-        </p>
-      ),
-    },
-    {
       title: "Skills",
       content: (
         <>
@@ -67,7 +128,7 @@ function About() {
                 className={activeSkillCategory === category ? "active" : ""}
                 onClick={() => setActiveSkillCategory(category)}
               >
-                {category.charAt(0).toUpperCase() + category.slice(1)}
+                {skillLabels[category]}
               </button>
             ))}
           </div>
@@ -82,45 +143,29 @@ function About() {
     {
       title: "Experience",
       content: (
-        <>
-          <p>
-            Intern @ DigitalNEST – Managed multiple frontend and backend
-            projects, enhancing features, integrating APIs, and maintaining
-            client sites. Collaborated with designers and developers to deliver
-            polished, user-focused solutions in a fast-paced setting.
-          </p>
-          <p>
-            Intern @ Bay Valley Tech – Led backend development and supported
-            frontend teams on internal full-stack projects. Built scalable APIs,
-            contributed to UI/UX planning with Figma and Notion, and ensured
-            smooth team communication.
-          </p>
-          <p>
-            Freelance Developer – Speedys Mobile Detailing – Created and sold a
-            custom website for a local business, enabling direct customer
-            contact and boosting online presence to grow their customer base.
-          </p>
-        </>
+        <ul className="experience-list">
+          {experience.map((role) => (
+            <li key={`${role.title}-${role.organization}`}>
+              <strong>{role.title}</strong>
+              <span>{role.organization}</span>
+              <time>{role.dates}</time>
+            </li>
+          ))}
+        </ul>
       ),
     },
     {
       title: "Education",
       content: (
-        <>
-          <p>
-            California State University, Stanislaus B.S. in Business
-            Administration – Concentration in Computer Information Systems / Built
-            a strong foundation in IT and network fundamentals while developing
-            skills in research, project leadership, and team communication.
-          </p>
-          <p>
-            Bay Valley Tech – Code Academy / Focused primarily on frontend
-            development with HTML, CSS, JavaScript, and React. Strengthened
-            skills through solo projects including a login page, email template,
-            and multiplication sheet. Completed a full-stack journal app to
-            explore backend fundamentals and database integration.
-          </p>
-        </>
+        <ul className="education-list">
+          {education.map((program) => (
+            <li key={`${program.credential}-${program.institution}`}>
+              <strong>{program.credential}</strong>
+              <span>{program.institution}</span>
+              <time>{program.dates}</time>
+            </li>
+          ))}
+        </ul>
       ),
     },
     // {

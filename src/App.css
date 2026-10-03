@@ -1,15 +1,36 @@
 :root {
-  --bg0: #0a0a0a;
-  --bg1: #111111;
-  --text: rgba(255, 255, 255, 0.92);
-  --muted: rgba(255, 255, 255, 0.72);
+  --bg0: #090b10;
+  --bg1: #11141d;
+  --text: rgba(255, 255, 255, 0.94);
+  --muted: rgba(255, 255, 255, 0.68);
+  --accent: #77e0d3;
+  --accent-contrast: #071110;
+  --surface: rgba(26, 30, 42, 0.8);
+  --surface-solid: #151923;
+  --surface-muted: rgba(255, 255, 255, 0.055);
+  --border: rgba(255, 255, 255, 0.11);
+  --border-strong: rgba(255, 255, 255, 0.18);
   --content-width: 1100px;
   --page-padding: clamp(16px, 4vw, 28px);
   --nav-height: 64px;
 
-  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
-    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-  --font-display: "Sour Gummy", var(--font-sans);
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-display: var(--font-sans);
+}
+
+:root[data-theme="light"] {
+  --bg0: #f2f5f7;
+  --bg1: #e4eaee;
+  --text: rgba(16, 23, 32, 0.94);
+  --muted: rgba(16, 23, 32, 0.67);
+  --accent: #087f73;
+  --accent-contrast: #fff;
+  --surface: rgba(255, 255, 255, 0.86);
+  --surface-solid: #fbfcfd;
+  --surface-muted: rgba(16, 23, 32, 0.055);
+  --border: rgba(16, 23, 32, 0.13);
+  --border-strong: rgba(16, 23, 32, 0.22);
 }
 
 *,
@@ -31,15 +52,19 @@ body {
   color: var(--text);
   background: radial-gradient(
       1200px 800px at 20% -10%,
-      rgba(99, 102, 241, 0.16),
+      rgba(94, 234, 212, 0.16),
       rgba(99, 102, 241, 0) 60%
     ),
     radial-gradient(
       900px 600px at 90% 0%,
-      rgba(34, 211, 238, 0.10),
+      rgba(96, 165, 250, 0.10),
       rgba(34, 211, 238, 0) 55%
     ),
     linear-gradient(135deg, var(--bg0), var(--bg1) 45%, #0b0b0b);
+}
+
+:root[data-theme="light"] body {
+  background: radial-gradient(1100px 700px at 5% -10%, rgba(94, 234, 212, 0.22), transparent 60%), radial-gradient(900px 600px at 95% 0%, rgba(96, 165, 250, 0.14), transparent 56%), linear-gradient(135deg, var(--bg0), var(--bg1));
 }
 
 h1,
@@ -61,7 +86,7 @@ a {
 }
 
 :focus-visible {
-  outline: 2px solid rgba(34, 211, 238, 0.55);
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
 
@@ -75,7 +100,7 @@ section {
 }
 
 section + section {
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid var(--border);
 }
 
 .section-inner {
@@ -87,5 +112,7 @@ section + section {
   margin: 0;
   font-size: clamp(1.6rem, 2.4vw, 2.2rem);
   letter-spacing: 0.01em;
-  color: rgba(255, 255, 255, 0.95);
+  color: var(--text);
 }
+
+body.modal-open { overflow: hidden; }

@@ -1,7 +1,7 @@
 import "./navbar.css";
 import { useEffect, useMemo, useState } from "react";
 
-function Navbar() {
+function Navbar({ theme, onThemeToggle }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("intro");
 
@@ -103,6 +103,15 @@ function Navbar() {
               );
             })}
           </ul>
+          <button
+            className="theme-toggle"
+            type="button"
+            onClick={onThemeToggle}
+            aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+            title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+          >
+            <span aria-hidden="true">{theme === "dark" ? "☼" : "◐"}</span>
+          </button>
         </nav>
       </div>
     </header>

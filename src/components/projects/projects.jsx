@@ -1,10 +1,13 @@
+import { useState } from "react";
 import { motion as Motion } from "framer-motion";
 import { CardData } from "./cardData";
 import ProjectCard from "./projectCard";
+import ProjectModal from "./projectModal";
 
 import "./projects.css";
 
 function Projects() {
+  const [selectedProject, setSelectedProject] = useState(null);
   const gridVariants = {
     hidden: {},
     visible: {
@@ -18,7 +21,13 @@ function Projects() {
   return (
     <section id="projects" className="projects-section">
       <div className="section-inner">
-        <h2 className="section-title">Projects</h2>
+        <div className="section-heading">
+          <div>
+            <p className="section-kicker">Selected work</p>
+            <h2 className="section-title">Projects that turn ideas into useful tools.</h2>
+          </div>
+          <p className="section-intro">Open a project to explore its story, stack, screenshots, and links.</p>
+        </div>
         <Motion.div
           className="projects-grid"
           variants={gridVariants}
@@ -27,10 +36,11 @@ function Projects() {
           viewport={{ once: true, amount: 0.2 }}
         >
           {CardData.map((project) => (
-            <ProjectCard key={project.title} {...project} />
+            <ProjectCard key={project.title} project={project} onOpen={() => setSelectedProject(project)} />
           ))}
         </Motion.div>
       </div>
+      {selectedProject && <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />}
     </section>
   );
 }
