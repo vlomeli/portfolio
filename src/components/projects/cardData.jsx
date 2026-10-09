@@ -49,6 +49,7 @@ export const CardData = [
     title: "Salinas Valley Sports Hall of Fame",
     description:
       "Overview: A live WordPress site celebrating Salinas Valley athletes, coaches, and community members. Contribution: Created reusable Elementor components, maintained content and media, improved responsive HTML and CSS, reviewed updates with Yoast SEO, configured Stripe payments, and set up campaign metadata to support analytics tracking.",
+    liveURL: "https://salinasvalleysportshalloffame.com/",
     stack: ["Wordpress", "Elementor", "Yoast SEO", "CSS", "Javascript", "Components", "Content management"],
   },
   {
