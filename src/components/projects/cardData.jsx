@@ -10,6 +10,11 @@ import simplicateLogin from "../../assets/simplicate-leads-login.png";
 import simplicateWorkspace from "../../assets/simplicate-leads-workspace.png";
 import simplicateResults from "../../assets/simplicate-leads-results.png";
 import simplicateHistory from "../../assets/simplicate-leads-history.png";
+import salinasSportsHallHero from "../../assets/salinas-sports-hall-hero.png";
+import salinasSportsHallCeremony from "../../assets/salinas-sports-hall-ceremony.png";
+import salinasSportsHallContact from "../../assets/salinas-sports-hall-contact.png";
+import salinasSportsHallInductees from "../../assets/salinas-sports-hall-inductees.png";
+import salinasSportsHallFooter from "../../assets/salinas-sports-hall-footer.png";
 
 export const CardData = [
   {
@@ -21,47 +26,60 @@ export const CardData = [
     ],
     title: "Simplicate Leads",
     description:
-      "A private lead-discovery and outreach tool built for Simplicate, a review-management company. It helps the team search for relevant local businesses, collect essential business details, identify publicly available contact emails when possible, and export outreach-ready CSV lists for personalized email campaigns. The application uses a React frontend and Node.js/Express backend, with Supabase for authentication, secure user access, and temporary job storage. Google Places powers live business discovery, while a backend email-discovery workflow checks public website pages for visible contact emails. The project includes duplicate prevention through permanent Place ID tracking, configurable daily and monthly API safeguards, per-user rate limits, fixture mode for cost-free development, and downloadable full-result and outreach-only CSV exports.",
+      "Overview: A private lead-discovery and outreach tool for finding relevant local businesses and exporting outreach-ready CSV lists for personalized campaigns. Contribution: Built its React and Node.js/Express application with Supabase access controls, Google Places discovery, public-email discovery, duplicate prevention, usage safeguards, and CSV exports.",
     codeURL: "https://github.com/vlomeli/simplicate-lead-generator",
-    stack: ["React", "Node.js", "Express", "Supabase", "Google Places"],
+    stack: ["React","Express.js", "Node.js", "PostgresSQL", "Google Places", "Node.js", "Express.js", "Render", "CSS", "Fetching", "API", "Rest API"],
   },
   {
     images: [cloneguard],
     title: "CloneGuard",
     description:
-      "A Python-based CLI tool that leverages the GitHub API to ingest and scan repository URLs for security vulnerabilities using static analysis, heuristic pattern matching, and automated code inspection, with development accelerated using OpenAI Codex. It generates structured vulnerability reports that are pipelined into Claude for summarization and enables interactive, context-aware querying directly within the terminal. The system also integrates ElevenLabs for real-time voice synthesis, delivering a conversational security assistant experience and earning the team a “Best Use of ElevenLabs” award at a hackathon.",
+      "Overview: A Python CLI that scans GitHub repositories for security vulnerabilities and delivers structured findings in the terminal. Contribution: Built the GitHub API, static-analysis, reporting, Claude summarization, and ElevenLabs voice workflow that earned the team a Best Use of ElevenLabs hackathon award.",
     codeURL: "https://github.com/vlomeli/cloneguard",
-    stack: ["Python", "GitHub API", "Static analysis", "ElevenLabs"],
+    stack: ["Python", "GitHub API", "Static analysis", "ElevenLabs", "Gemini", "Cyber Security"],
+  },
+  {
+    images: [
+      salinasSportsHallHero,
+      salinasSportsHallCeremony,
+      salinasSportsHallContact,
+      salinasSportsHallInductees,
+      salinasSportsHallFooter,
+    ],
+    title: "Salinas Valley Sports Hall of Fame",
+    description:
+      "Overview: A live WordPress site celebrating Salinas Valley athletes, coaches, and community members. Contribution: Created reusable Elementor components, maintained content and media, improved responsive HTML and CSS, reviewed updates with Yoast SEO, configured Stripe payments, and set up campaign metadata to support analytics tracking.",
+    stack: ["Wordpress", "Elementor", "Yoast SEO", "CSS", "Javascript", "Components", "Content management"],
   },
   {
     images: [journal],
     title: "N0T3D",
     description:
-      "A full-stack journaling application implemented as a React single-page frontend (React Router, modal-based editing) communicating with a Node.js/Express REST API backed by MySQL. It supports user registration/login with hashed passwords and JWT-based sessions, then provides authenticated CRUD workflows for journal entries, with built-in search and calendar-based navigation for quickly locating entries by date. Entries include mood tags (e.g., Happy/Neutral/Sad) designed to support a future AI insights layer that analyzes trends to surface recurring themes and possible mood drivers.",
+      "Overview: A full-stack journaling application for creating, searching, and navigating personal entries. Contribution: Built the React and Node.js/Express application with MySQL, hashed-password and JWT authentication, authenticated CRUD flows, calendar navigation, search, and mood tags.",
     codeURL: "https://github.com/vlomeli/journal-frontend",
-    stack: ["React", "Express", "MySQL", "JWT"],
+    stack: ["React", "Express.js", "Node.js", "CSS", "MySQL", "JWT", "Authentication", "Rest API"],
   },
   {
     images: [nestwork],
     title: "Nestwork",
     description:
-      "Worked on an internal Digital Nest tool designed to streamline meeting scheduling with interns. As the intern pool continues to grow, this tool improves efficiency in managing organizational meetings. Contributed to implementing pairing functionality and enhancing the frontend for a smoother user experience.",
+      "Overview: An internal Digital Nest tool that streamlines meeting scheduling for roughly 55 interns across locations. Contribution: Implemented pairing functionality and enhanced the frontend, reducing manual scheduling effort by approximately 40%.",
     liveURL: "https://bizznest.github.io/modesto-bizznest-scheduler/",
-    stack: ["JavaScript", "Scheduling", "Frontend"],
+    stack: ["JavaScript", "CSS", "Scheduling", "Frontend", "Json Data"],
   },
   {
     images: [rotorheads],
     title: "Rotorheads",
     description:
-      "A WordPress-based website built for Rotorhead Partners, a leadership and team-building workshop company led by a Google program partnership lead, designed to showcase custom facilitation programs that help teams build trust, presence, and alignment through structured play. Working alongside a design team, I implemented all workshop pages, custom-coded the workshops dropdown navigation, corrected CSS conflicts site-wide, and assisted the team in resolving layout inconsistencies, all translated into responsive, production-ready builds using WordPress, Elementor, Spectra One, custom JavaScript, and CSS.",
+      "Overview: A WordPress website for Rotorhead Partners that showcases leadership and team-building workshops designed to build trust, presence, and alignment. Contribution: Implemented all workshop pages, custom-coded the workshop dropdown navigation, resolved site-wide CSS conflicts, and helped deliver responsive production builds with the design team.",
     liveURL: "https://rotorheadpartners.us/",
-    stack: ["WordPress", "Elementor", "JavaScript", "CSS"],
+    stack: ["WordPress", "Spectra One", "Yoast SEO", "JavaScript", "CSS", "Components"],
   },
   {
     images: [detailing],
     title: "Speedy's Mobile Detailing",
     description:
-      "A local detailing company needed to expand their business online, so I created a website for them. Using HTML, JavaScript, and CSS, I developed a solution featuring EmailJS for quote requests and an embedded map to display their location. The website is hosted with a custom domain.",
+      "Overview: A custom-domain website that helps a local detailing company build its online presence. Contribution: Built the HTML, CSS, and JavaScript site with EmailJS quote requests and an embedded location map.",
     liveURL: "https://speedysmobiledetailing.net/",
     stack: ["HTML", "CSS", "JavaScript", "EmailJS"],
   },
@@ -69,15 +87,15 @@ export const CardData = [
     images: [socialmedia],
     title: "DuckPond",
     description:
-      "During my time at BVT, my team and I developed a full-stack social media application using React, Bulma, MongoDB, and Express.js. This platform enables users to share text-based posts and express themselves, fostering engagement and interaction among the community.",
+      "Overview: A full-stack social media application where users share text-based posts and engage with a community. Contribution: Collaborated with my Bay Valley Tech team to develop the React, Bulma, MongoDB, and Express.js application, supporting community interaction.",
     codeURL: "https://github.com/vlomeli/ddsm-front-end",
-    stack: ["React", "Express", "MongoDB", "Bulma"],
+    stack: ["React", "Express.js", "MongoDB", "Bulma", "CSS", "Rest API", "Fetching"],
   },
   {
     images: [testingtool],
     title: "DuckPond Testing Tool",
     description:
-      "My team and I developed a Python testing tool designed to rigorously stress test our social media application's endpoints. Leveraging pytest for testing and faker for generating dummy data, this mini project aimed to cover a wide range of scenarios and edge cases, ensuring robust performance and reliability.",
+      "Overview: A Python stress-testing tool for validating social media application endpoints across edge cases. Contribution: Collaborated with my team to use pytest and Faker for synthetic-data generation and endpoint testing, helping improve application reliability.",
     codeURL: "https://github.com/vlomeli/ddsm-backend-testing-tool",
     stack: ["Python", "pytest", "Faker"],
   },
@@ -85,15 +103,15 @@ export const CardData = [
     images: [careerharvest],
     title: "Career Harvest",
     description:
-      "Contributed to an internal Digital Nest tool that web scrapes job listings based on the specific career paths interns choose to explore. Refactored the frontend for a cleaner, more user-friendly interface, and continue to maintain and enhance the platform by adding new features.",
+      "Overview: An internal Digital Nest tool that gathers job listings for interns' chosen career paths. Contribution: Refactored the frontend for a cleaner, more user-friendly experience and continue to maintain it with new features that enhance content discovery.",
     codeURL: "",
-    stack: ["Web scraping", "React", "Internal tool"],
+    stack: ["Web scraping", "React", "Internal tool", "React", "CSS", "Components"],
   },
   {
     images: [],
     title: "Phishing Campaign",
     description:
-      "Project details are being prepared. Add a screenshot, project description, stack, and link when this work is ready to share.",
-    stack: ["GoPhish", "Security awareness"],
+      "Overview: A two-campaign phishing-awareness initiative designed to help staff recognize suspicious links. Contribution: Planned and deployed GoPhish on a DigitalOcean VM, configured simulated email delivery and employee data, and created a training landing page that reduced link clicks from 45 of 91 people to 10 of 91—a 78% reduction.",
+    stack: ["GoPhish", "Security awareness", "SMTP", "Port", "Google App passwords", "Analytics", "Phising"],
   },
 ];
