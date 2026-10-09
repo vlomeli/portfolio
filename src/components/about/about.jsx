@@ -48,12 +48,17 @@ function About() {
       dates: "Aug 2025 – Sep 2026",
     },
     {
-      title: "Full-Stack Software Engineer Associate",
+      title: "Web Developer",
+      organization: "SVSHF · Salinas, CA",
+      dates: "Mar 2026 – Sep 2026",
+    },
+    {
+      title: "Software Engineer Associate",
       organization: "DigitalNEST · Modesto, CA",
       dates: "Aug 2024 – Aug 2025",
     },
     {
-      title: "Full-Stack Software Engineer Intern",
+      title: "Software Engineer Intern",
       organization: "Bay Valley Tech · Modesto, CA",
       dates: "Mar 2024 – Aug 2024",
     },
